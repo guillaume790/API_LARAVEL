@@ -59,3 +59,14 @@ php artisan serve
 
 L'API est alors disponible sur `http://localhost:8000/api/...`
 
+## Utilisation de l’IA
+
+Ce projet a été développé en intégrant des outils d’assistance à l’écriture de code basés sur l’intelligence artificielle (Microsoft Copilot).  
+L’IA a été utilisée pour :
+- accélérer la rédaction de portions de code,
+- proposer des améliorations structurelles,
+- générer des idées d’interface,
+- optimiser la lisibilité du projet.
+
+Toutes les décisions techniques, l’architecture et l’intégration finale ont été réalisées manuellement.
+

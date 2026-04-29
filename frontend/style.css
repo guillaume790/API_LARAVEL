@@ -1,0 +1,193 @@
+/* --- Layout général --- */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    transition: background 0.3s;
+}
+
+.container {
+    background: white;
+    width: 450px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* --- Input + bouton ajouter --- */
+.input-zone {
+    display: flex;
+    gap: 10px;
+}
+
+#titre {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#addBtn {
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+#addBtn:hover {
+    background: #1e40af;
+}
+
+/* --- Liste des tâches --- */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: #f9fafb;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e5e7eb;
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+}
+
+.terminee {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* --- Boutons --- */
+.btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-termine {
+    background: #10b981;
+    color: white;
+}
+
+.btn-termine:hover {
+    background: #059669;
+}
+
+.btn-supprimer {
+    background: #ef4444;
+    color: white;
+    margin-left: 8px;
+}
+
+.btn-supprimer:hover {
+    background: #b91c1c;
+}
+
+/* --- Filtres --- */
+#filtres {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+#filtres button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: #e5e7eb;
+    transition: 0.2s;
+}
+
+#filtres button:hover {
+    background: #d1d5db;
+}
+
+/* --- Compteur --- */
+#compteur {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- Bouton thème --- */
+#themeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
+}
+
+body.dark #themeBtn {
+    color: #f3f4f6;
+}
+
+/* --- Thème sombre --- */
+body.dark {
+    background: #1f2937;
+    color: #f3f4f6;
+}
+
+body.dark .container {
+    background: #374151;
+}
+
+body.dark li {
+    background: #4b5563;
+    border-color: #6b7280;
+}
+
+body.dark #titre {
+    background: #4b5563;
+    color: white;
+    border-color: #6b7280;
+}
+
+body.dark #addBtn {
+    background: #3b82f6;
+}
+
+body.dark #filtres button {
+    background: #6b7280;
+    color: white;
+}
+
+/* --- Animation fade-in --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

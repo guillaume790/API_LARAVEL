@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List - API Laravel</title>
+
+    <!-- Icônes FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Ton CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button id="themeBtn"><i class="fa-solid fa-moon"></i></button>
+
+    <div class="container">
+        <h1>Mes tâches</h1>
+
+        <div class="input-zone">
+            <input id="titre" placeholder="Nouvelle tâche">
+            <button id="addBtn" onclick="ajouterTache()">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+
+        <div id="filtres">
+            <button onclick="setFiltre('toutes')">Toutes</button>
+            <button onclick="setFiltre('actives')">Actives</button>
+            <button onclick="setFiltre('terminees')">Terminées</button>
+        </div>
+
+        <ul id="liste"></ul>
+
+        <p id="compteur"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
